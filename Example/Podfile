@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZLogger_Example' do
+  pod 'ZLogger', :path => '../'
+
+  target 'ZLogger_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
