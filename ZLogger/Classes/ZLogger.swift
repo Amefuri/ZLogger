@@ -7,15 +7,16 @@
 
 import Foundation
 
-
+/// Enum for type of logging event.
 public enum ZLoggerEventType: String {
-  case error    = "[❤️ ERROR]" // Error
-  case info     = "[💙 INFO]" // Info
-  case debug    = "[💚 DEBUG]" // Debug
-  case verbose  = "[💜 VERBOSE]" // Verbose
-  case warning  = "[💛 WARNING]" // Warning
+  case error    = "[❤️ ERROR]"
+  case info     = "[💙 INFO]"
+  case debug    = "[💚 DEBUG]"
+  case verbose  = "[💜 VERBOSE]"
+  case warning  = "[💛 WARNING]"
 }
 
+/// ZLogger: An improved logger for iOS.
 public class ZLogger {
   
   static var dateFormat = "yyyy-MM-dd hh:mm:ssSSS"
@@ -27,6 +28,15 @@ public class ZLogger {
     return formatter
   }
   
+  /**
+   Log message.
+   - parameter message: logging message.
+   - parameter event: type of event.
+   - parameter fileName: name of a file.
+   - parameter line: line number.
+   - parameter column: column number.
+   - parameter funcName: name of function.
+   */
   public class func log(message: Any,
                         event: ZLoggerEventType,
                         fileName: String = #file,
@@ -45,6 +55,14 @@ public class ZLogger {
   }
 }
 
+/**
+ A Shorthen Wrapper for ZLogger log Error.
+ - parameter message: logging message.
+ - parameter fileName: name of a file.
+ - parameter line: line number.
+ - parameter column: column number.
+ - parameter funcName: name of function.
+ */
 public func loge(_ message: Any,
                  fileName: String = #file,
                  line: Int = #line,
@@ -58,6 +76,14 @@ public func loge(_ message: Any,
               funcName: funcName)
 }
 
+/**
+ A Shorthen Wrapper for ZLogger log Info.
+ - parameter message: logging message.
+ - parameter fileName: name of a file.
+ - parameter line: line number.
+ - parameter column: column number.
+ - parameter funcName: name of function.
+ */
 public func logi(_ message: Any,
                  fileName: String = #file,
                  line: Int = #line,
@@ -71,6 +97,14 @@ public func logi(_ message: Any,
               funcName: funcName)
 }
 
+/**
+ A Shorthen Wrapper for ZLogger log Debug.
+ - parameter message: logging message.
+ - parameter fileName: name of a file.
+ - parameter line: line number.
+ - parameter column: column number.
+ - parameter funcName: name of function.
+ */
 public func logd(_ message: Any,
                  fileName: String = #file,
                  line: Int = #line,
@@ -84,6 +118,14 @@ public func logd(_ message: Any,
               funcName: funcName)
 }
 
+/**
+ A Shorthen Wrapper for ZLogger log Verbose.
+ - parameter message: logging message.
+ - parameter fileName: name of a file.
+ - parameter line: line number.
+ - parameter column: column number.
+ - parameter funcName: name of function.
+ */
 public func logv(_ message: Any,
                  fileName: String = #file,
                  line: Int = #line,
@@ -97,6 +139,14 @@ public func logv(_ message: Any,
               funcName: funcName)
 }
 
+/**
+ A Shorthen Wrapper for ZLogger log Warning.
+ - parameter message: logging message.
+ - parameter fileName: name of a file.
+ - parameter line: line number.
+ - parameter column: column number.
+ - parameter funcName: name of function.
+ */
 public func logw(_ message: Any,
                  fileName: String = #file,
                  line: Int = #line,
