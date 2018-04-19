@@ -24,7 +24,7 @@ pod 'ZLogger', :git => 'https://github.com/Amefuri/ZLogger.git'
 
 ## Author
 
-amefuri, daydreamclover.studio@gmail.com
+Amefuri, daydreamclover.studio@gmail.com
 
 ## License
 
