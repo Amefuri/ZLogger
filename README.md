@@ -10,6 +10,8 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+* Xcode 9 or later
+* Swift 4 or later
 
 ## Installation
 
@@ -17,7 +19,7 @@ ZLogger is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ZLogger'
+pod 'ZLogger', :git => 'https://github.com/Amefuri/ZLogger.git'
 ```
 
 ## Author
